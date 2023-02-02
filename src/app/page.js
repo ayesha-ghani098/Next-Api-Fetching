@@ -1,11 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { Alert } from "antd";
 
+// Styles
 import styles from "./page.module.css";
+
+// Apis
 import { getUniversitiesByCountry } from "@/apiActions/university/action.universities";
 import { getCountries } from "@/apiActions/country/action.countries";
+
+// Components
 import DataTable from "@/components/Table/Table";
-import { Alert } from "antd";
 
 const Home = () => {
   const [univeristiesData, setUniversitiesData] = useState([]);
